@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../services/app.service';
 
 @Component({
   selector: 'app-posts',
@@ -7,14 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
 
-  constructor() { }
+  filter: string = '';
+  posts$ = this.appService.getPosts();
+
+
+  constructor(private appService: AppService) { }
 
   ngOnInit() {
   }
 
-  onInput(evt) {
-    console.log(evt);
 
-  }
 
 }

@@ -1,0 +1,25 @@
+<div style="text-align: center">
+  <header>
+    <h1>Posts</h1>
+  </header>
+
+  <div>
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>Filter</mat-label>
+      <input matInput type="text" name="filter" [(ngModel)]="filter">
+    </mat-form-field>
+  </div>
+
+  <section class="posts" style="height:400px; overflow-y: auto;">
+    <mat-card class="example-card" *ngFor="let post of posts$|async">
+      <mat-card-title>
+        {{post.title}}
+      </mat-card-title>
+      <mat-card-content>
+        <div>
+          {{post.body}}
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </section>
+</div>
