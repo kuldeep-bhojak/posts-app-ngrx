@@ -12,4 +12,9 @@ export class PostsComponent implements OnInit {
   ngOnInit() {
   }
 
+  onInput(evt) {
+    console.log(evt);
+
+  }
+
 }
