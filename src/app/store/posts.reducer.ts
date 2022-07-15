@@ -4,14 +4,14 @@ import * as PostsAction from "./post.actions";
 
 export const postsFeatureKey = 'post';
 
-export const reducer = createReducer(
-  initialState,
-  on(PostsAction.getPosts, (state) => {
-    return {
-      posts: {
-        id: 'a',
-        title: 'ad'
-      }
-    }
-  })
-);
+// export const reducer = createReducer(
+//   initialState,
+//   on(PostsAction.getPosts, (state) => {
+//     return {
+//       ...state,
+//       posts: {
+//        ...state.posts
+//       }
+//     }
+//   })
+// );
